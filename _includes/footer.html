@@ -1,0 +1,21 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-main">
+        <p>👋 I'm Jimmy Bourassa and this is where I ramble about code and stuff.</p>
+
+        <p>See something wrong? Get in touch or open a <a href="https://github.com/jbourassa/blog">PR on GitHub</a>.</p>
+      </div>
+
+      <div class="footer-col footer-col-social">
+        <ul class="social-media-list">
+          <li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ site.github_username| escape }}</span></a></li>
+          <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">{{ site.linkedin_username| escape }}</span></a></li>
+          <li><a class="u-email" href="mailto:{{ site.email }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/icons.svg#email' | relative_url }}"></use></svg> <span class="username"> {{ site.email }}</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

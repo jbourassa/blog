@@ -1,0 +1,51 @@
+---
+---
+
+@use "sass:color";
+@use "sass:math";
+
+// 🟣👨‍🎨
+$grey-color: #846b8c;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%, $saturation: -80%);
+$grey-color-dark:  color.adjust($grey-color, $lightness: -10%);
+$brand-color:      color.adjust($grey-color, $saturation: 30%);
+
+// 2-col footer, *before* minima so it can override it in a media query.
+.footer-col-main {
+  width: calc(70% - 30px / 2)
+}
+
+.footer-col-social {
+  width: calc(30% - 30px / 2)
+}
+
+
+@import "minima";
+
+// 👨‍🎨
+hr {
+  color: color.adjust($brand-color, $lightness: 30%);
+  background: color.adjust($brand-color, $lightness: 30%);
+  height: 1px;
+  font-size: 0;
+  border: 0;
+  margin-bottom: math.div($spacing-unit, 2)
+}
+
+// Link and visited links can have the same color if you ask me
+a, a:visited, a:hover {
+ color: $brand-color;
+}
+
+.site-header {
+  border-top-color: #6f3585;
+}
+
+// Items have large margin-bottom, no need for extra padding
+.site-footer {
+  padding-bottom: 0;
+}
+
+.site-nav {
+  display: none;
+}
